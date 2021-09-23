@@ -1,3 +1,4 @@
+#Add loop so ssh does not end after running once until user specifies
 import paramiko
 from getpass import getpass
 
@@ -5,7 +6,7 @@ host = "10.10.0.4"
 port = 22
 username = (input("Enter Username: "))
 password = getpass("Enter password: ")
-command = "show config"
+command = input("Enter your command: ")
 
 ssh = paramiko.SSHClient()
 
